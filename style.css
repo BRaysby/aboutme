@@ -1,181 +1,22 @@
-/* Global Reset and Theme Colors */
-:root {
-    --primary-blue: #0077b6;
-    --accent-green: #2a9d8f;
-    --dark-bg: #0d1b2a;
-    --card-bg: #1b263b;
-    --text-color: #e0e1dd;
-    --highlight: #48cae4;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--dark-bg);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    position: relative;
-    overflow-x: hidden;
-}
-
-/* Electrical Background Styling with Moving Wires and Pulses */
-.circuit-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0.25;
-}
-
-.wire {
-    position: absolute;
-    background: linear-gradient(90deg, transparent, var(--highlight), transparent);
-}
-
-.wire-1 {
-    top: 20%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-}
-
-.wire-2 {
-    top: 60%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-}
-
-.wire-3 {
-    top: 0;
-    left: 40%;
-    width: 2px;
-    height: 100%;
-}
-
-.pulse {
-    position: absolute;
-    background-color: var(--accent-green);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent-green), 0 0 20px var(--highlight);
-}
-
-.pulse-1 {
-    top: 20%;
-    left: -50px;
-    width: 10px;
-    height: 10px;
-    animation: movePulseHorizontal 6s linear infinite;
-}
-
-.pulse-2 {
-    top: -50px;
-    left: 40%;
-    width: 10px;
-    height: 10px;
-    animation: movePulseVertical 8s linear infinite;
-}
-
-@keyframes movePulseHorizontal {
-    0% { left: -50px; }
-    100% { left: 105%; }
-}
-
-@keyframes movePulseVertical {
-    0% { top: -50px; }
-    100% { top: 105%; }
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
-    color: white;
-    text-align: center;
-    padding: 3rem 1rem;
-    border-bottom: 4px solid var(--highlight);
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    margin: 0;
-    font-size: 2.2rem;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-/* Main Container Layout */
-.container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    position: relative;
-    z-index: 1;
-}
-
-/* Card Styling */
-.card {
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    border-left: 6px solid var(--accent-green);
-}
-
-.card h2 {
-    color: var(--highlight);
-    margin-top: 0;
-}
-
-/* Mini-Game Styling */
-.game-section {
-    border-left-color: var(--primary-blue);
-    text-align: center;
-}
-
-.game-display {
-    font-size: 1.2rem;
+/* Mini-Game Layout Enhancements */
+.game-stats {
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background-color: #0d1b2a;
-    border-radius: 8px;
-    border: 2px dashed var(--highlight);
-    transition: all 0.3s ease;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    color: var(--highlight);
 }
 
-/* Interactive Button */
-.btn {
-    background-color: var(--accent-green);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.1s ease;
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-.btn:hover {
-    background-color: #21867a;
-    transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #050d14;
-    color: #8d99ae;
-    font-size: 0.9rem;
-    position: relative;
-    z-index: 1;
+.button-grid .btn {
+    flex: 1 1 40%;
+    min-width: 140px;
 }
