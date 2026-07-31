@@ -35,11 +35,22 @@
 
         <!-- Mini-Game Section -->
         <section class="card game-section">
-            <h2>Mini-Game: Circuit Voltage Fixer 🔌</h2>
-            <p>Help me power up the circuit! Click the button below to fix the loose connection and test your electrical engineering skills.</p>
-            <div id="game-display" class="game-display">Circuit Status: Offline 🔴</div>
-            <button id="fix-circuit-btn" class="btn">Connect Circuit</button>
-            <p id="game-score">Score: 0 successful connections</p>
+            <h2>Mini-Game: Circuit Diagnostic Lab 🔌</h2>
+            <p>Diagnose and fix the system failure before time runs out! Read the diagnostic prompt and select the correct fix.</p>
+            
+            <div class="game-stats">
+                <span id="game-timer">Time Left: ⏱️ 15s</span>
+                <span id="game-score">Score: 0</span>
+            </div>
+
+            <div id="game-display" class="game-display">
+                System Status: Ready to Test 🟡<br>
+                <span id="challenge-prompt" style="font-size: 0.9rem; color: var(--highlight);">Click "Start Challenge" to begin!</span>
+            </div>
+
+            <div id="action-buttons" class="button-grid">
+                <button id="start-game-btn" class="btn">Start Challenge</button>
+            </div>
         </section>
     </main>
 
